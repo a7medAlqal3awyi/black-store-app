@@ -8,6 +8,7 @@ import 'package:the_black_store/presentation/widgets/double_text.dart';
 
 import '../widgets/custom_check_box.dart';
 import '../widgets/input_field.dart';
+import '../widgets/leading_app_bar.dart';
 import '../widgets/my_button.dart';
 import '../widgets/screen_divider.dart';
 
@@ -30,25 +31,11 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          leading: Padding(
-            padding: EdgeInsets.all(10.w),
-            child: Container(
-              width: 40.w,
-              height: 40.h,
-              decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(16.w),
-                  color: AppStyles.bg),
-              child: const Icon(
-                Icons.arrow_back,
-                color: Colors.white,
-              ),
-            ),
-          ),
+          leading: LeadingAppBar(),
         ),
         body: SingleChildScrollView(
           child: Form(
-            key:formKey,
+            key: formKey,
             child: Padding(
               padding: EdgeInsets.all(16.w),
               child: Column(children: [
@@ -67,12 +54,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 MyInputFiled(
+                  obscureText: false,
+                  type: TextInputType.emailAddress,
                   controller: emailController,
                   title: AppConstants.email,
                   hint: AppConstants.enterEmail,
                   widget: SvgPicture.asset("assets/icons/email.svg"),
                 ),
                 MyInputFiled(
+                  obscureText: true,
+
+                  type: TextInputType.visiblePassword,
                   controller: passwordController,
                   title: AppConstants.password,
                   hint: AppConstants.enterPassword,
@@ -85,7 +77,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: primary,
                   text: AppConstants.login,
                   textColor: Colors.black,
-                  onTap: () {},
+                  onTap: () {
+                    formKey.currentState!.validate()
+                        ? debugPrint("True")
+                        : debugPrint("False");
+                  },
                 ),
                 const DoubleText(),
                 ScreenDivider(

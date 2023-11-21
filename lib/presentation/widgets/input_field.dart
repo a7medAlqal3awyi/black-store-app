@@ -9,10 +9,14 @@ class MyInputFiled extends StatelessWidget {
       required this.title,
       required this.hint,
       this.controller,
-      this.widget});
+      this.widget,
+      required this.type,
+      required this.obscureText });
 
   final String title;
   final String hint;
+  final TextInputType type;
+  final bool obscureText;
 
   final TextEditingController? controller;
   final Widget? widget;
@@ -36,12 +40,14 @@ class MyInputFiled extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               decoration: BoxDecoration(
                   color: AppStyles.bg,
-                  border: Border.all(color: Colors.grey, width: 1),
+                  border: Border.all(color: AppStyles.bg, width: 1),
                   borderRadius: BorderRadius.circular(11.w)),
               child: Row(
                 children: [
                   Expanded(
                     child: TextFormField(
+                      obscureText: obscureText,
+                      keyboardType: type,
                       onTapOutside: (event) {
                         FocusManager.instance.primaryFocus?.unfocus();
                       },
@@ -51,13 +57,15 @@ class MyInputFiled extends StatelessWidget {
                       decoration: InputDecoration(
                         hintText: hint,
                         hintStyle: AppConstants.hintStyle,
-                        focusedBorder: const UnderlineInputBorder(
+                        focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
+                            color: AppStyles.bg,
                             width: 0,
                           ),
                         ),
-                        enabledBorder: const UnderlineInputBorder(
+                        enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
+                            color: AppStyles.bg,
                             width: 0,
                           ),
                         ),
