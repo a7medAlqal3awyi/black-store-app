@@ -21,11 +21,16 @@ class AppConstants {
   static String emailValidation =" يجب ادخل البريد الالكروني ";
   static String passwordValidation  =" يجب ادخل كلمة المرور ";
   static String createNewAccount  =" إنشاء حساب جديد ";
+  static String createNewPassword  =" إنشاء كلمة المرور الجديدة ";
   static String fullName  =" الاسم بالكامل ";
+  static String follow  =" متابعة ";
   static String enterFullName  =" أدخل الاسم بالكامل ";
   static String verifyPassword  =" تأكيد كلمة المرور ";
+  static String myEmail  ="a7medalqalawyi@gmail.com";
   static String enterSentCode  =" قم بإدخال الكود المرسل";
+  static String donotRecieveCode  ="لم تتلق الرمز . ";
   static String weSentCodeVerificationTo  ="لقد قمنا بإرسال رمز التأكيد الى";
+  static String resend  ="إعادة الإرسال (42 ثانية)";
   static String otpMessage  =" سنرسل رمز OTP إلى بريدك الإلكتروني للأمان عند نسيان كلمة المرور الخاصة بك ";
 
 
@@ -34,12 +39,14 @@ class AppConstants {
     fontFamily: fontFamily,
     fontWeight: FontWeight.w700,
   );
-  static  TextStyle hintStyle = TextStyle(
+  // hint text
+  static  TextStyle smallStyle = TextStyle(
     fontSize: 12.sp,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w400,
   );
-  static  TextStyle appBarTextStyle = TextStyle(
+  // App Bar style
+  static  TextStyle BigTextStyle = TextStyle(
 
     fontSize: 18.sp,
     fontFamily: fontFamily,

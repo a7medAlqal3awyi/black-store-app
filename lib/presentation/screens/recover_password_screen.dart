@@ -29,7 +29,7 @@ class RecoverPasswordScreen extends StatelessWidget {
         title: Text(
           AppConstants.createNewAccount,
           textAlign: TextAlign.center,
-          style: AppConstants.appBarTextStyle,
+          style: AppConstants.BigTextStyle,
         ),
       ),
       body: SingleChildScrollView(
@@ -76,7 +76,7 @@ class RecoverPasswordScreen extends StatelessWidget {
                 SizedBox(height: context.deviceHeight/2.5,),
                 ButtonWithOnlyText(
                   color: primary,
-                  text: AppConstants.next,
+                  text: AppConstants.follow,
                   textColor: Colors.black,
                   onTap: () {
                     context.push(const OTPScreen());

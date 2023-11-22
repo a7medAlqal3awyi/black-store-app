@@ -57,7 +57,7 @@ class MyInputFiled extends StatelessWidget {
                       controller: controller,
                       decoration: InputDecoration(
                         hintText: hint,
-                        hintStyle: AppConstants.hintStyle,
+                        hintStyle: AppConstants.smallStyle,
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: AppStyles.bg,
