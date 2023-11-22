@@ -11,7 +11,7 @@ class MyInputFiled extends StatelessWidget {
       this.controller,
       this.widget,
       required this.type,
-      required this.obscureText });
+      required this.obscureText});
 
   final String title;
   final String hint;
@@ -37,7 +37,7 @@ class MyInputFiled extends StatelessWidget {
             Container(
               height: 52.h,
               margin: EdgeInsets.only(top: 10.h),
-              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 10.h),
               decoration: BoxDecoration(
                   color: AppStyles.bg,
                   border: Border.all(color: AppStyles.bg, width: 1),
@@ -45,6 +45,7 @@ class MyInputFiled extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
+
                     child: TextFormField(
                       obscureText: obscureText,
                       keyboardType: type,

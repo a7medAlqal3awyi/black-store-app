@@ -71,7 +71,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   widget: SvgPicture.asset("assets/icons/Lock.svg"),
                 ),
                 CustomCheckBox(
+
                   title: AppConstants.rememberMe,
+
                 ),
                 ButtonWithOnlyText(
                   color: primary,

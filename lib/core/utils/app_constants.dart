@@ -24,6 +24,9 @@ class AppConstants {
   static String fullName  =" الاسم بالكامل ";
   static String enterFullName  =" أدخل الاسم بالكامل ";
   static String verifyPassword  =" تأكيد كلمة المرور ";
+  static String enterSentCode  =" قم بإدخال الكود المرسل";
+  static String weSentCodeVerificationTo  ="لقد قمنا بإرسال رمز التأكيد الى";
+  static String otpMessage  =" سنرسل رمز OTP إلى بريدك الإلكتروني للأمان عند نسيان كلمة المرور الخاصة بك ";
 
 
   static  TextStyle titleStyle = TextStyle(
