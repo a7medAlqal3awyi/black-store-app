@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_black_store/core/utils/routes.dart';
+import 'package:the_black_store/presentation/screens/celebration_screen.dart';
 
 import '../../core/styles/app_styles.dart';
 import '../../core/utils/app_constants.dart';
@@ -61,7 +62,7 @@ class NewPasswordScreen extends StatelessWidget {
               text: AppConstants.follow,
               textColor: Colors.black,
               onTap: () {
-                context.push(const NewPasswordScreen());
+                context.push(const CelebrationScreen());
               },
             ),
           ],
