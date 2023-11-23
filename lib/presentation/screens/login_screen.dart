@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
+import 'package:the_black_store/core/utils/routes.dart';
+import 'package:the_black_store/presentation/screens/main_screen.dart';
 import 'package:the_black_store/presentation/widgets/button_with_icon.dart';
 import 'package:the_black_store/presentation/widgets/double_text.dart';
 
@@ -31,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          leading: LeadingAppBar(),
+          leading: const LeadingAppBar(),
         ),
         body: SingleChildScrollView(
           child: Form(
@@ -63,7 +65,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 MyInputFiled(
                   obscureText: true,
-
                   type: TextInputType.visiblePassword,
                   controller: passwordController,
                   title: AppConstants.password,
@@ -71,18 +72,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   widget: SvgPicture.asset("assets/icons/Lock.svg"),
                 ),
                 CustomCheckBox(
-
                   title: AppConstants.rememberMe,
-
                 ),
                 ButtonWithOnlyText(
                   color: primary,
                   text: AppConstants.login,
                   textColor: Colors.black,
                   onTap: () {
-                    formKey.currentState!.validate()
-                        ? debugPrint("True")
-                        : debugPrint("False");
+                    context.push(const MainScreen());
                   },
                 ),
                 const DoubleText(),

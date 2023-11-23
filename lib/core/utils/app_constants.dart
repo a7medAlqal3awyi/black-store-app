@@ -25,6 +25,14 @@ class AppConstants {
   static String fullName  =" الاسم بالكامل ";
   static String follow  =" متابعة ";
   static String theMain  =" الرئيسية ";
+  static String money  =" العملات ";
+  static String gold  =" الذهب ";
+  static String favourite  =" المفضلة ";
+  static String profile  =" البروفيل ";
+  static String wellcome  =" مرحباً ";
+  static String myName  =" احمد القلعاوي ";
+  static String blackMarket  =" Black Market ";
+  static String bkamFeBlackStore  =" بكام في السوق السوداء؟! ";
   static String enterFullName  =" أدخل الاسم بالكامل ";
   static String verifyPassword  =" تأكيد كلمة المرور ";
   static String myEmail  ="a7medalqalawyi@gmail.com";
