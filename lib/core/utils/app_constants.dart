@@ -15,7 +15,14 @@ class AppConstants {
   static String rememberMe = "تذكرني";
   static String or = "أو";
   static String doYouForgetPassword = "هل نسيت كلمة المرور ؟";
+  static String usDollor = "دولار أمريكي / USD";
   static String dontHaveAnAccount = "لا تمتلك حساب؟  ";
+  static String bankPrice = "سعر البنك";
+  static String lastUpdate = "آخر تحديث";
+  static String from15Min = "منذ 15 دقيقة";
+  static String blackStore = "السوق السوداء";
+  static String khamsen = "50 ج.م";
+  static String forty = "40 ج.م";
   static String createAnAccount = " إنشاء حساب";
   static String completeWithGoogle = " اكمل باستخدام جوجل";
   static String emailValidation =" يجب ادخل البريد الالكروني ";
