@@ -24,6 +24,9 @@ class AppConstants {
   static String khamsen = "50 ج.م";
   static String forty = "40 ج.م";
   static String createAnAccount = " إنشاء حساب";
+  static String avgPrice = " متوسط السعر";
+  static String buy = " شراء";
+  static String sell = " بيع";
   static String completeWithGoogle = " اكمل باستخدام جوجل";
   static String emailValidation =" يجب ادخل البريد الالكروني ";
   static String passwordValidation  =" يجب ادخل كلمة المرور ";
