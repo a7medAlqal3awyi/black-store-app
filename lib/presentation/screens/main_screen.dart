@@ -257,10 +257,10 @@ class MainScreen extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 1,
-                    mainAxisSpacing: 3),
+                    mainAxisSpacing: 2),
                 itemBuilder:(context,index){
                   return Padding(
-                    padding:  EdgeInsets.all(8.h),
+                    padding:  EdgeInsets.all(8.w),
                     child: Container(
                       width: 156.w,
                       height: 134.3.h,
