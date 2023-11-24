@@ -27,6 +27,7 @@ class AppConstants {
   static String avgPrice = " متوسط السعر";
   static String buy = " شراء";
   static String sell = " بيع";
+  static String bankMasr = " بنك مصر";
   static String completeWithGoogle = " اكمل باستخدام جوجل";
   static String emailValidation =" يجب ادخل البريد الالكروني ";
   static String passwordValidation  =" يجب ادخل كلمة المرور ";
