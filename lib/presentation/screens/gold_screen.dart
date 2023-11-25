@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
+import 'package:the_black_store/presentation/widgets/alert.dart';
 import 'package:the_black_store/presentation/widgets/share_icon.dart';
 
 import '../widgets/column_of_double_text.dart';
@@ -35,14 +36,19 @@ class _GoldScreenState extends State<GoldScreen>
           style: AppConstants.BigTextStyle,
         ),
         actions: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 14.w),
-            child: SvgPicture.asset('assets/icons/goldCalc.svg'),
+          GestureDetector(
+            onTap: () {
+              showMyAlert(context);
+            },
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 14.w),
+              child: SvgPicture.asset('assets/icons/goldCalc.svg'),
+            ),
           ),
         ],
       ),
       body: Padding(
-        padding:  EdgeInsets.all(24.w),
+        padding: EdgeInsets.all(24.w),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -101,9 +107,10 @@ class _GoldScreenState extends State<GoldScreen>
                 itemCount: 15,
                 scrollDirection: Axis.vertical,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, crossAxisSpacing: 15, mainAxisSpacing: 24,
-                  mainAxisExtent: 150
-                ),
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 15,
+                    mainAxisSpacing: 24,
+                    mainAxisExtent: 150),
                 itemBuilder: (context, index) {
                   return Container(
                     width: 156.w,

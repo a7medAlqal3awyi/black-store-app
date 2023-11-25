@@ -94,7 +94,6 @@ class MainScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-
                   ],
                 ),
               ),
@@ -201,7 +200,10 @@ class MainScreen extends StatelessWidget {
                 itemCount: 2,
                 scrollDirection: Axis.vertical,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, crossAxisSpacing: 1, mainAxisSpacing: 2),
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 1,
+                  mainAxisSpacing: 2,
+                ),
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.all(8.w),
