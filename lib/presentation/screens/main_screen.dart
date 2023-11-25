@@ -157,7 +157,8 @@ class MainScreen extends StatelessWidget {
               Container(
                 height: 303.h,
                 width: 375.w,
-                color: Colors.white,
+                color: Colors.black,
+                child: SvgPicture.asset("assets/images/graph.svg"),
               ),
               SizedBox(height: 20.w),
 
@@ -249,18 +250,15 @@ class MainScreen extends StatelessWidget {
               ),
 
               GridView.builder(
-
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
-                itemCount: 10,
+                itemCount: 2,
                 scrollDirection: Axis.vertical,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 1,
-                    mainAxisSpacing: 2),
-                itemBuilder:(context,index){
+                    crossAxisCount: 2, crossAxisSpacing: 1, mainAxisSpacing: 2),
+                itemBuilder: (context, index) {
                   return Padding(
-                    padding:  EdgeInsets.all(8.w),
+                    padding: EdgeInsets.all(8.w),
                     child: Container(
                       width: 156.w,
                       height: 134.3.h,
@@ -282,7 +280,8 @@ class MainScreen extends StatelessWidget {
                                       shape: BoxShape.circle,
                                       color: Colors.black.withOpacity(.3),
                                       border: Border.all(
-                                          color: const Color(0xFF4F4F4F), width: 2)),
+                                          color: const Color(0xFF4F4F4F),
+                                          width: 2)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4.0),
                                     child: SvgPicture.asset(
@@ -305,7 +304,8 @@ class MainScreen extends StatelessWidget {
                                       shape: BoxShape.circle,
                                       color: Colors.black.withOpacity(.3),
                                       border: Border.all(
-                                          color: const Color(0xFF4F4F4F), width: 2)),
+                                          color: const Color(0xFF4F4F4F),
+                                          width: 2)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4.0),
                                     child: SvgPicture.asset(
@@ -381,8 +381,7 @@ class MainScreen extends StatelessWidget {
                       ),
                     ),
                   );
-                } ,
-
+                },
               )
             ],
           ),

@@ -19,10 +19,9 @@ class MyApp extends StatelessWidget {
         builder: (_, child) {
           return MaterialApp(
             title: 'Black Store',
-            theme: ThemeData(
-            ),
+            theme: ThemeData(),
             darkTheme: ThemeData.dark(
-              useMaterial3:true,
+              useMaterial3: true,
             ),
             themeMode: ThemeMode.dark,
             debugShowCheckedModeBanner: false,

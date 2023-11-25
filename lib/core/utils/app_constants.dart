@@ -46,6 +46,8 @@ class AppConstants {
   static String bkamFeBlackStore  =" بكام في السوق السوداء؟! ";
   static String enterFullName  =" أدخل الاسم بالكامل ";
   static String verifyPassword  =" تأكيد كلمة المرور ";
+  static String bullion  =" السبائك ";
+  static String currency  =" العملات ";
   static String myEmail  ="a7medalqalawyi@gmail.com";
   static String enterSentCode  =" قم بإدخال الكود المرسل";
   static String donotRecieveCode  ="لم تتلق الرمز . ";
