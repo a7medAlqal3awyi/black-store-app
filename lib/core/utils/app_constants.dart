@@ -48,6 +48,7 @@ class AppConstants {
   static String verifyPassword  =" تأكيد كلمة المرور ";
   static String bullion  =" السبائك ";
   static String currency  =" العملات ";
+  static String gold24  =" ذهب عيار 24 ";
   static String myEmail  ="a7medalqalawyi@gmail.com";
   static String enterSentCode  =" قم بإدخال الكود المرسل";
   static String donotRecieveCode  ="لم تتلق الرمز . ";

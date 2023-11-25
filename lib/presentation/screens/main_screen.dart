@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
+import '../widgets/column_of_double_text.dart';
 import '../widgets/favorite_icon.dart';
+import '../widgets/my_small_vertical_divider.dart';
 import '../widgets/share_icon.dart';
 import '../widgets/vertical_divider.dart';
 import 'app_bar_of_main_sc.dart';
@@ -81,76 +83,18 @@ class MainScreen extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Expanded(
-                          child: Column(
-                            children: [
-                              Text(
-                                AppConstants.bankPrice,
-                                style: TextStyle(
-                                    fontSize: 10.sp,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: fontFamily,
-                                    color: const Color(0xFF828282)),
-                              ),
-                              Text(
-                                AppConstants.forty,
-                                style: TextStyle(
-                                    fontSize: 10.sp,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: fontFamily,
-                                    color: const Color(0xFF4F4F4F)),
-                              ),
-                            ],
-                          ),
+                        ColumnOfDoubleText(
+                          firstText: AppConstants.buy,
+                          priceText: AppConstants.forty,
                         ),
-                        const MyVerticalDivider(),
-                        Expanded(
-                          child: Column(
-                            children: [
-                              Text(
-                                AppConstants.bankPrice,
-                                style: TextStyle(
-                                    fontSize: 10.sp,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: fontFamily,
-                                    color: const Color(0xFF828282)),
-                              ),
-                              Text(
-                                AppConstants.forty,
-                                style: TextStyle(
-                                    fontSize: 10.sp,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: fontFamily,
-                                    color: const Color(0xFF4F4F4F)),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const MyVerticalDivider(),
-                        Expanded(
-                          child: Column(
-                            children: [
-                              Text(
-                                AppConstants.bankPrice,
-                                style: TextStyle(
-                                    fontSize: 10.sp,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: fontFamily,
-                                    color: const Color(0xFF828282)),
-                              ),
-                              Text(
-                                AppConstants.forty,
-                                style: TextStyle(
-                                    fontSize: 10.sp,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: fontFamily,
-                                    color: const Color(0xFF4F4F4F)),
-                              ),
-                            ],
-                          ),
+                        const MySmallVerticalDivider(),
+                        ColumnOfDoubleText(
+                          firstText: AppConstants.sell,
+                          priceText: AppConstants.forty,
                         ),
                       ],
-                    )
+                    ),
+
                   ],
                 ),
               ),
@@ -317,11 +261,7 @@ class MainScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                Container(
-                                  width: 2.w,
-                                  height: 18.h,
-                                  color: const Color(0xFF4F4F4F),
-                                ),
+                                const MySmallVerticalDivider(),
                                 Expanded(
                                   child: Column(
                                     children: [
