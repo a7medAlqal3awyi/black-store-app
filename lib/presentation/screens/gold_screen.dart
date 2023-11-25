@@ -84,7 +84,26 @@ class _GoldScreenState extends State<GoldScreen>
                 ),
               ),
             ),
-          )
+          ),
+          Container(
+            width: 156.w,
+            height: 134.3.h,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.w), color: AppStyles.bg),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 46.64.w,
+                      height: 46.64.h,
+                      child: Image.asset("assets/images/gold.png"),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
