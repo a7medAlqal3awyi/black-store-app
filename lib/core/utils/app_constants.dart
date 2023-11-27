@@ -28,7 +28,16 @@ class AppConstants {
   static String totalWeightByGM = " إجمالي الوزن بالجرام  ";
   static String avgPrice = " متوسط السعر";
   static String eyar = " العيار";
+  static String btc = "BTC";
+  static String goldEra = "Gold Era";
+  static String selema = "Selema";
   static String buy = " شراء";
+  static String oneGM = "1 جرام";
+  static String twioGM = "5 جرام";
+  static String tenGM = "10 جرام";
+  static String twinyGM = "20 جرام";
+  static String thirtyGM = "30 جرام";
+  static String fiftyGM = "50 جرام";
   static String sell = " بيع";
   static String bankMasr = " بنك مصر";
   static String completeWithGoogle = " اكمل باستخدام جوجل";
@@ -72,6 +81,14 @@ class AppConstants {
     fontSize: 12.sp,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w400,
+  );
+// Mid text
+  static TextStyle medFontStyle = TextStyle(
+    fontSize: 12.sp,
+    fontFamily: fontFamily,
+    color: Colors.white,
+
+    fontWeight: FontWeight.w700,
   );
 
   // App Bar style

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/utils/routes.dart';
+import 'package:the_black_store/presentation/widgets/item_of_alloy_tap.dart';
 
 import '../../core/styles/app_styles.dart';
 import '../../core/utils/app_constants.dart';
@@ -78,10 +80,13 @@ class _MyTapBarState extends State<MyTapBar>
         SizedBox(
           width: 327.w,
           height: context.deviceHeight,
-          child: TabBarView(controller: tapController, children: [
-            const ItemOfGoldTap(),
-            const ItemOfGoldTap(),
-            const ItemOfGoldTap(),
+          child: TabBarView(controller: tapController, children:  const [
+            ItemOfGoldTap(),
+            ItemOfLollyTap(),
+            //     title: AppConstants.btc,
+            //     imagePath: "assets/icons/btc.png",
+            //     weight: AppConstants.oneGM),
+            ItemOfGoldTap(),
           ]),
         ),
       ],
