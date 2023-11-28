@@ -82,6 +82,7 @@ class AppConstants {
     fontFamily: fontFamily,
     fontWeight: FontWeight.w400,
   );
+
 // Mid text
   static TextStyle medFontStyle = TextStyle(
     fontSize: 12.sp,

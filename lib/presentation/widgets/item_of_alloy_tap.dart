@@ -12,7 +12,6 @@ class ItemOfLollyTap extends StatelessWidget {
     super.key,
   });
 
-  // final String weight;
   @override
   Widget build(BuildContext context) {
     List<String> title = [
