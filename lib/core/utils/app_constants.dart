@@ -29,7 +29,7 @@ class AppConstants {
   static String avgPrice = " متوسط السعر";
   static String eyar = " العيار";
   static String btc = "BTC";
-  static String goldEra = "Gold Era";
+  static String goldEra = "GoldEra";
   static String selema = "Selema";
   static String buy = " شراء";
   static String oneGM = "1 جرام";
@@ -88,7 +88,6 @@ class AppConstants {
     fontSize: 12.sp,
     fontFamily: fontFamily,
     color: Colors.white,
-
     fontWeight: FontWeight.w700,
   );
 

@@ -17,7 +17,7 @@ class ItemOfGoldTap extends StatelessWidget {
     return GridView.builder(
       shrinkWrap: false,
       physics: const BouncingScrollPhysics(),
-      itemCount: 15,
+      itemCount: 5,
       scrollDirection: Axis.vertical,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
