@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,9 +15,10 @@ Future showMyAlert(context) {
     context: context,
     builder: (ctx) => SizedBox(
       width: 327.w,
-      height: 220.h,
+      height: 200.h,
       child: AlertDialog(
-        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12.w))),
         backgroundColor: const Color(0xFF2A2A2A),
         title: const Row(
           children: [
@@ -65,16 +68,16 @@ Future showMyAlert(context) {
                   ),
                 )
               ],
+            ),
+            ButtonWithOnlyText(
+              color: primary,
+              text: AppConstants.calcGoldCast,
+              textColor: Colors.black,
             )
+
           ],
         ),
-        actions: <Widget>[
-          ButtonWithOnlyText(
-            color: primary,
-            text: AppConstants.calcGoldCast,
-            textColor: Colors.black,
-          )
-        ],
+
       ),
     ),
   );

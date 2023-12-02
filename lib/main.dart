@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:the_black_store/presentation/widgets/my_tap_bar.dart';
+import 'package:the_black_store/presentation/screens/dash_board.dart';
 
 
 void main() {
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
               Locale('ar'),
               Locale('en'),
             ],
-            home: const MyTapBar()
+            home: const DashBoardScreen()
           );
         });
   }

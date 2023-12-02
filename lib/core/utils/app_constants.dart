@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:the_black_store/core/styles/app_styles.dart';
 
 String fontFamily = "Almarai";
 
@@ -95,6 +96,22 @@ class AppConstants {
   static TextStyle BigTextStyle = TextStyle(
     fontSize: 18.sp,
     fontFamily: fontFamily,
+    fontWeight: FontWeight.w700,
+  );
+  // selected Text Style in bottom navigation bar
+  static TextStyle selectedTextStyle  =   TextStyle(
+    color: primary,
+    fontSize: 12.sp,
+    fontFamily: fontFamily,
+    height: 2,
+    fontWeight: FontWeight.w700,
+  );
+  // Unselected Text Style in bottom navigation bar
+  static TextStyle unSelectedTextStyle  =   TextStyle(
+    color: Colors.white.withOpacity(0.5),
+    fontSize: 12.sp,
+    fontFamily: fontFamily,
+    height: 2,
     fontWeight: FontWeight.w700,
   );
 }

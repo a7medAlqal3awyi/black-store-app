@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
 import 'package:the_black_store/presentation/widgets/alert.dart';
-import 'package:the_black_store/presentation/widgets/my_tap_bar.dart';
+import 'package:the_black_store/presentation/widgets/the_gold_screen.dart';
 class GoldScreen extends StatelessWidget {
   const GoldScreen({super.key});
 
@@ -36,7 +36,7 @@ class GoldScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.all(24.w),
-            child: const MyTapBar(),
+            child: const TheGoldScreen(),
           ),
         ],
       ),
