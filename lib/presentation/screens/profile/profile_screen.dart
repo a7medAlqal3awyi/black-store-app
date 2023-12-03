@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:the_black_store/core/utils/routes.dart';
+import 'package:the_black_store/presentation/screens/profile/edit_profile_screen.dart';
 
 import '../../../core/styles/app_styles.dart';
 import '../../../core/utils/app_constants.dart';
@@ -50,29 +52,39 @@ class ProfileScreen extends StatelessWidget {
                 height: 100.h,
               ),
               WidgetOfIconTextIcon(
+                onTap: (){
+                  context.push(const EditProfileScreen());
+                },
                 txt: AppConstants.editProfile,
                 iconPath: "assets/icons/Profile.svg",
               ),
               WidgetOfIconTextIcon(
+                onTap: (){},
                 txt: AppConstants.shareApp,
                 iconPath: "assets/icons/shareApp.svg",
               ),
               WidgetOfIconTextIcon(
+                onTap: (){},
+
                 txt: AppConstants.aboutApp,
                 iconPath: "assets/icons/infocircle.svg",
               ),
               WidgetOfIconTextIcon(
+                onTap: (){},
+
                 txt: AppConstants.mainCurrency,
                 iconPath: "assets/icons/dollarWhite.svg",
               ),
               WidgetOfIconTextIcon(
+                onTap: (){},
+
                 txt: AppConstants.setting,
                 iconPath: "assets/icons/setting.svg",
               ),
               GestureDetector(
                 onTap: () {
                   showModalBottomSheet(
-                    clipBehavior: Clip.antiAlias,
+                      clipBehavior: Clip.antiAlias,
                       context: context,
                       builder: (BuildContext context) {
                         return const BottomSheet();
@@ -82,8 +94,7 @@ class ProfileScreen extends StatelessWidget {
                           topLeft: Radius.circular(50.0),
                           topRight: Radius.circular(50.0),
                         ),
-                      )
-                  );
+                      ));
                 },
                 child: SizedBox(
                   height: 48.h,
@@ -141,21 +152,24 @@ class BottomSheet extends StatelessWidget {
                   color: const Color(0xFF7D848D)),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Container(
-                  width: 32.w,
-                  height: 32.h,
-                  decoration: BoxDecoration(
-                    color: AppStyles.redColor,
-                    shape: BoxShape.rectangle,
-                    borderRadius:
-                        BorderRadius.circular(12.8.w),
-                  ),
-                  child: SvgPicture.asset(
-                      "assets/icons/CloseSquare.svg")),
+          GestureDetector(
+            onTap: (){
+              context.pop(context);
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal:20.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                    width: 32.w,
+                    height: 32.h,
+                    decoration: BoxDecoration(
+                      color: AppStyles.redColor,
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(12.8.w),
+                    ),
+                    child: SvgPicture.asset("assets/icons/CloseSquare.svg")),
+              ),
             ),
           ),
           Text(
@@ -170,8 +184,7 @@ class BottomSheet extends StatelessWidget {
                 side: BorderSide(
                   width: 1,
                   strokeAlign: BorderSide.strokeAlignCenter,
-                  color: Colors.white
-                      .withOpacity(0.20000000298023224),
+                  color: Colors.white.withOpacity(0.20000000298023224),
                 ),
               ),
             ),
