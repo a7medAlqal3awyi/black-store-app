@@ -73,7 +73,9 @@ class AppConstants {
   static String aboutApp = "عن التطبيق";
   static String mainCurrency = "العملة الاساسية";
   static String setting = "الاعدادات";
+  static String edit = "تعديل";
   static String logOut = "تسجيل الخروج";
+  static String changephoto = "تغيير الصورة";
   static String resend = "إعادة الإرسال (42 ثانية)";
   static String otpMessage =
       " سنرسل رمز OTP إلى بريدك الإلكتروني للأمان عند نسيان كلمة المرور الخاصة بك ";
