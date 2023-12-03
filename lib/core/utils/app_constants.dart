@@ -67,6 +67,12 @@ class AppConstants {
   static String donotRecieveCode = "لم تتلق الرمز . ";
   static String weSentCodeVerificationTo = "لقد قمنا بإرسال رمز التأكيد الى";
   static String successCreatingNewPassword = "تم إنشاء كلمة مرور جديدة بنجاح";
+  static String editProfile = "تعديل الملف الشخصي";
+  static String shareApp = "مشاركة التطبيق";
+  static String aboutApp = "عن التطبيق";
+  static String mainCurrency = "العملة الاساسية";
+  static String setting = "الاعدادات";
+  static String logOut = "تسجيل الخروج";
   static String resend = "إعادة الإرسال (42 ثانية)";
   static String otpMessage =
       " سنرسل رمز OTP إلى بريدك الإلكتروني للأمان عند نسيان كلمة المرور الخاصة بك ";
