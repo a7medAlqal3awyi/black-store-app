@@ -18,6 +18,7 @@ class EditProfileScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.black,
         leading: LeadingAppBar(
+
           onTap: () {
             context.pop(context);
           },
