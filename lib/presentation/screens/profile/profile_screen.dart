@@ -7,6 +7,7 @@ import 'package:the_black_store/presentation/screens/profile/edit_profile_screen
 import '../../../core/styles/app_styles.dart';
 import '../../../core/utils/app_constants.dart';
 import '../../widgets/custom_profile_widget.dart';
+import '../main_currecy_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -52,32 +53,31 @@ class ProfileScreen extends StatelessWidget {
                 height: 100.h,
               ),
               WidgetOfIconTextIcon(
-                onTap: (){
+                onTap: () {
                   context.push(const EditProfileScreen());
                 },
                 txt: AppConstants.editProfile,
                 iconPath: "assets/icons/Profile.svg",
               ),
               WidgetOfIconTextIcon(
-                onTap: (){},
+                onTap: () {},
                 txt: AppConstants.shareApp,
                 iconPath: "assets/icons/shareApp.svg",
               ),
               WidgetOfIconTextIcon(
-                onTap: (){},
-
+                onTap: () {},
                 txt: AppConstants.aboutApp,
                 iconPath: "assets/icons/infocircle.svg",
               ),
               WidgetOfIconTextIcon(
-                onTap: (){},
-
+                onTap: () {
+                  context.push(const MainCurrencyScreen());
+            },
                 txt: AppConstants.mainCurrency,
                 iconPath: "assets/icons/dollarWhite.svg",
               ),
               WidgetOfIconTextIcon(
-                onTap: (){},
-
+                onTap: () {},
                 txt: AppConstants.setting,
                 iconPath: "assets/icons/setting.svg",
               ),
@@ -153,11 +153,11 @@ class BottomSheet extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: (){
+            onTap: () {
               context.pop(context);
             },
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal:20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Container(

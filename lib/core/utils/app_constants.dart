@@ -69,6 +69,8 @@ class AppConstants {
   static String weSentCodeVerificationTo = "لقد قمنا بإرسال رمز التأكيد الى";
   static String successCreatingNewPassword = "تم إنشاء كلمة مرور جديدة بنجاح";
   static String editProfile = "تعديل الملف الشخصي";
+  static String choiceMainCurrency = "حدد العملة الأساسية";
+  static String egyptionPound = "جنيه مصري / EGP";
   static String shareApp = "مشاركة التطبيق";
   static String aboutApp = "عن التطبيق";
   static String mainCurrency = "العملة الاساسية";
