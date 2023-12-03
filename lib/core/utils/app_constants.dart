@@ -64,6 +64,7 @@ class AppConstants {
   static String gold24 = " ذهب عيار 24 ";
   static String myEmail = "a7medalqalawyi@gmail.com";
   static String enterSentCode = " قم بإدخال الكود المرسل";
+  static String doYouSureToLogOut = "هل انت متأكد من تسجيل الخروج";
   static String donotRecieveCode = "لم تتلق الرمز . ";
   static String weSentCodeVerificationTo = "لقد قمنا بإرسال رمز التأكيد الى";
   static String successCreatingNewPassword = "تم إنشاء كلمة مرور جديدة بنجاح";
