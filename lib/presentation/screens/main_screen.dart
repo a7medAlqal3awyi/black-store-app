@@ -198,10 +198,12 @@ class MainScreen extends StatelessWidget {
               GridView.builder(
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
-                itemCount: 2,
+                itemCount: 10,
                 scrollDirection: Axis.vertical,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
+                  childAspectRatio: 4/3.4,
+
                   crossAxisSpacing: 1,
                   mainAxisSpacing: 2,
                 ),
