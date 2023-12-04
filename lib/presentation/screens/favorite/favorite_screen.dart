@@ -19,7 +19,7 @@ class FavoriteScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           AppConstants.favourite,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
       ),
       body: Padding(

@@ -35,7 +35,7 @@ class _TheGoldScreenState extends State<TheGoldScreen>
         centerTitle: true,
         title: Text(
           AppConstants.gold,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
         actions: [
           GestureDetector(

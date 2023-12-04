@@ -29,7 +29,7 @@ class RecoverPasswordScreen extends StatelessWidget {
         title: Text(
           AppConstants.createNewAccount,
           textAlign: TextAlign.center,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
       ),
       body: SingleChildScrollView(

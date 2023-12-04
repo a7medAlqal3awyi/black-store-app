@@ -41,7 +41,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         title: Text(
           AppConstants.createNewAccount,
           textAlign: TextAlign.center,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
       ),
       body: SingleChildScrollView(

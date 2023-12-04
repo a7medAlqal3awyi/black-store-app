@@ -26,7 +26,7 @@ class EditProfileScreen extends StatelessWidget {
         ),
         title: Text(
           AppConstants.editProfile,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
         actions: [
           Padding(

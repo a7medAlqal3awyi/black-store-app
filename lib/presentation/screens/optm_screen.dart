@@ -27,7 +27,7 @@ class OTPScreen extends StatelessWidget {
         title: Text(
           AppConstants.createNewAccount,
           textAlign: TextAlign.center,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
       ),
       body: SingleChildScrollView(
@@ -41,7 +41,7 @@ class OTPScreen extends StatelessWidget {
                 ),
                 Text(
                   AppConstants.enterSentCode,
-                  style: AppConstants.BigTextStyle,
+                  style: AppConstants.bigTextStyle,
                 ),
                 Text(
                   AppConstants.weSentCodeVerificationTo,

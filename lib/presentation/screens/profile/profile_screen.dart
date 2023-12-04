@@ -3,10 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_black_store/core/utils/routes.dart';
 import 'package:the_black_store/presentation/screens/profile/edit_profile_screen.dart';
+import 'package:the_black_store/presentation/screens/setting/setting_screen.dart';
 
 import '../../../core/styles/app_styles.dart';
 import '../../../core/utils/app_constants.dart';
 import '../../widgets/custom_profile_widget.dart';
+import '../../widgets/custom_txt_button.dart';
 import '../main_currecy_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -21,7 +23,7 @@ class ProfileScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           AppConstants.profile,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
       ),
       body: Center(
@@ -47,7 +49,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               Text(
                 AppConstants.myName,
-                style: AppConstants.BigTextStyle,
+                style: AppConstants.bigTextStyle,
               ),
               SizedBox(
                 height: 100.h,
@@ -77,11 +79,16 @@ class ProfileScreen extends StatelessWidget {
                 iconPath: "assets/icons/dollarWhite.svg",
               ),
               WidgetOfIconTextIcon(
-                onTap: () {},
+                onTap: () {
+                  context.push(const SettingScreen());
+
+                },
                 txt: AppConstants.setting,
                 iconPath: "assets/icons/setting.svg",
               ),
-              GestureDetector(
+              CustomTextAndIconButton(
+                iconPath:"assets/icons/logout.svg" ,
+                txt: AppConstants.logOut,
                 onTap: () {
                   showModalBottomSheet(
                       clipBehavior: Clip.antiAlias,
@@ -96,26 +103,8 @@ class ProfileScreen extends StatelessWidget {
                         ),
                       ));
                 },
-                child: SizedBox(
-                  height: 48.h,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset("assets/icons/logout.svg"),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Text(
-                        AppConstants.logOut,
-                        style: TextStyle(
-                            fontFamily: fontFamily,
-                            fontWeight: FontWeight.w700,
-                            color: AppStyles.redColor,
-                            fontSize: 14.sp),
-                      ),
-                    ],
-                  ),
-                ),
+
+
               ),
             ],
           ),
@@ -174,7 +163,7 @@ class BottomSheet extends StatelessWidget {
           ),
           Text(
             AppConstants.doYouSureToLogOut,
-            style: AppConstants.BigTextStyle,
+            style: AppConstants.bigTextStyle,
           ),
           SvgPicture.asset("assets/icons/BigInfo.svg"),
           Container(
@@ -201,7 +190,7 @@ class BottomSheet extends StatelessWidget {
             child: Center(
               child: Text(
                 AppConstants.logOut,
-                style: AppConstants.BigTextStyle,
+                style: AppConstants.bigTextStyle,
               ),
             ),
           )

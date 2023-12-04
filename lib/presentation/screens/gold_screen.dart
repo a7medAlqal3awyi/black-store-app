@@ -17,7 +17,7 @@ class GoldScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           AppConstants.gold,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
         actions: [
           GestureDetector(

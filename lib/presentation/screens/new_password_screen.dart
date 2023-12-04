@@ -33,7 +33,7 @@ class NewPasswordScreen extends StatelessWidget {
         title: Text(
           AppConstants.createNewPassword,
           textAlign: TextAlign.center,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
       ),
       body: Padding(

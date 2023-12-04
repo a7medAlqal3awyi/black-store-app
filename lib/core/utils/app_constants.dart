@@ -75,9 +75,18 @@ class AppConstants {
   static String aboutApp = "عن التطبيق";
   static String mainCurrency = "العملة الاساسية";
   static String setting = "الاعدادات";
+  static String notifcationSetting = "اعدادات الاشعارات";
   static String edit = "تعديل";
   static String logOut = "تسجيل الخروج";
+  static String langauge = "اللغة";
   static String changephoto = "تغيير الصورة";
+  static String deleteAccount = "حذف الحساب";
+  static String changepassword = "تغيير كلمه المرور";
+  static String preferredArrangementOfBanks = "الترتيب المفضل للبنوك";
+  static String rankingListOfBanks = "قائمة ترتيب للبنوك";
+  static String preferredArrangementOfCurrency = "الترتيب المفضل للعملات";
+  static String choosePreferredArrangementOfCurrency = "إختر الترتيب المفضل للعملات";
+  static String pressLongToChangeBankArrangement = "إضغط مطولاً علي أي بنك لتغيير ترتيبه.  يمكنك تعديل هذة القائمة لاحقاً.";
   static String resend = "إعادة الإرسال (42 ثانية)";
   static String otpMessage =
       " سنرسل رمز OTP إلى بريدك الإلكتروني للأمان عند نسيان كلمة المرور الخاصة بك ";
@@ -104,7 +113,7 @@ class AppConstants {
   );
 
   // App Bar style
-  static TextStyle BigTextStyle = TextStyle(
+  static TextStyle bigTextStyle = TextStyle(
     fontSize: 18.sp,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w700,

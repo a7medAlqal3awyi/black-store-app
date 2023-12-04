@@ -21,10 +21,14 @@ class _MainCurrencyScreenState extends State<MainCurrencyScreen> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        leading: const LeadingAppBar(),
+        leading:  LeadingAppBar(
+          onTap: (){
+            context.pop(context);
+          },
+        ),
         title: Text(
           AppConstants.mainCurrency,
-          style: AppConstants.BigTextStyle,
+          style: AppConstants.bigTextStyle,
         ),
         centerTitle: true,
       ),
@@ -37,7 +41,7 @@ class _MainCurrencyScreenState extends State<MainCurrencyScreen> {
               children: [
                 Text(
                   AppConstants.choiceMainCurrency,
-                  style: AppConstants.BigTextStyle,
+                  style: AppConstants.bigTextStyle,
                 ),
               ],
             ),
@@ -45,46 +49,45 @@ class _MainCurrencyScreenState extends State<MainCurrencyScreen> {
               height: 20.h,
             ),
             SizedBox(
-              height: context.deviceHeight.h/2,
+              height: context.deviceHeight.h / 2,
               child: ListView.builder(
-                  itemBuilder: (context, index) {
-                    return Padding(
-                  padding: EdgeInsets.symmetric(vertical: 12.h),
-                  child: Container(
-                    width: 327.w,
-                    height: 58.h,
-                    decoration: ShapeDecoration(
-                      color: AppStyles.bg,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.w),
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: EdgeInsets.symmetric(vertical: 12.h),
+                    child: Container(
+                      width: 327.w,
+                      height: 58.h,
+                      decoration: ShapeDecoration(
+                        color: AppStyles.bg,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.w),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              AppConstants.egyptionPound,
+                              style: AppConstants.titleStyle,
+                            ),
+                            const Spacer(),
+                            Radio<int>(
+                              activeColor: primary,
+                              value: index,
+                              groupValue: selectedValue,
+                              onChanged: (value) {
+                                setState(() {
+                                  selectedValue = value!;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            AppConstants.egyptionPound,
-                            style: AppConstants.titleStyle,
-                          ),
-                          const Spacer(),
-                          Radio<int>(
-                            activeColor: primary,
-                            value: index,
-                            groupValue: selectedValue,
-
-                            onChanged: (value) {
-                              setState(() {
-                                selectedValue = value!;
-                              });
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              },
+                  );
+                },
                 itemCount: 5,
               ),
             ),
