@@ -33,8 +33,8 @@ class ItemOfFavoriteRow extends StatelessWidget {
               decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(9.w),
-                  image: const DecorationImage(
-                      image: AssetImage("assets/icons/bank.png"))),
+                  image:  DecorationImage(
+                      image: AssetImage(imagePath))),
             ),
             SizedBox(
               width: 5.w,
@@ -44,7 +44,7 @@ class ItemOfFavoriteRow extends StatelessWidget {
               style: AppConstants.medFontStyle,
             ),
             const Spacer(),
-            SvgPicture.asset(imagePath),
+            SvgPicture.asset("assets/icons/textalignjustifycenter.svg"),
           ],
         ),
       ),

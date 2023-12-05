@@ -83,12 +83,18 @@ class AppConstants {
   static String saveChanges = "حفظ التعديلات";
   static String deleteAccount = "حذف الحساب";
   static String blackStorePrice = "سعر السوق السوداء";
+  static String ryallQatr = "ريال قطري / QAR";
   static String changepassword = "تغيير كلمه المرور";
   static String preferredArrangementOfBanks = "الترتيب المفضل للبنوك";
   static String rankingListOfBanks = "قائمة ترتيب للبنوك";
+  static String rankingListOfCurrency = "قائمة ترتيب العملات";
   static String preferredArrangementOfCurrency = "الترتيب المفضل للعملات";
-  static String choosePreferredArrangementOfCurrency = "إختر الترتيب المفضل للعملات";
-  static String pressLongToChangeBankArrangement = "إضغط مطولاً علي أي بنك لتغيير ترتيبه.  يمكنك تعديل هذة القائمة لاحقاً.";
+  static String choosePreferredArrangementOfCurrency =
+      "إختر الترتيب المفضل للعملات";
+  static String pressLongToChangeBankArrangement =
+      "إضغط مطولاً علي أي بنك لتغيير ترتيبه.  يمكنك تعديل هذة القائمة لاحقاً.";
+  static String pressLongToChangeCurrencyArrangement =
+      "إضغط مطولاً علي أي عملة لتغيير ترتيبها.  يمكنك تعديل هذة القائمة لاحقاً.";
   static String resend = "إعادة الإرسال (42 ثانية)";
   static String otpMessage =
       " سنرسل رمز OTP إلى بريدك الإلكتروني للأمان عند نسيان كلمة المرور الخاصة بك ";
@@ -120,16 +126,18 @@ class AppConstants {
     fontFamily: fontFamily,
     fontWeight: FontWeight.w700,
   );
+
   // selected Text Style in bottom navigation bar
-  static TextStyle selectedTextStyle  =   TextStyle(
+  static TextStyle selectedTextStyle = TextStyle(
     color: primary,
     fontSize: 12.sp,
     fontFamily: fontFamily,
     height: 2,
     fontWeight: FontWeight.w700,
   );
+
   // Unselected Text Style in bottom navigation bar
-  static TextStyle unSelectedTextStyle  =   TextStyle(
+  static TextStyle unSelectedTextStyle = TextStyle(
     color: Colors.white.withOpacity(0.5),
     fontSize: 12.sp,
     fontFamily: fontFamily,

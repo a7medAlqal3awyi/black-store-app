@@ -7,6 +7,7 @@ import '../../../core/utils/app_constants.dart';
 import '../../widgets/buttons/custom_txt_button.dart';
 import '../../widgets/leading_app_bar.dart';
 import '../banks_arrangement_screen.dart';
+import '../currency_arrangement_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -47,7 +48,10 @@ class SettingScreen extends StatelessWidget {
             WidgetOfIconTextIcon(
                 iconPath: "assets/icons/dollarWhite.svg",
                 txt: AppConstants.preferredArrangementOfCurrency,
-                onTap: () {}),
+                onTap: () {
+                  context.push(const CurrencyArrangementScreen());
+
+                }),
             WidgetOfIconTextIcon(
                 iconPath: "assets/icons/global.svg",
                 txt: AppConstants.langauge,

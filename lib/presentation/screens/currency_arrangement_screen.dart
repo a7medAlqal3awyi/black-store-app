@@ -9,8 +9,8 @@ import '../widgets/item_of_favorites_bank_or_currency.dart';
 import '../widgets/item_of_row_i_icon_and_text.dart';
 import '../widgets/leading_app_bar.dart';
 
-class BanksArrangementScreen extends StatelessWidget {
-  const BanksArrangementScreen({super.key});
+class CurrencyArrangementScreen extends StatelessWidget {
+  const CurrencyArrangementScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class BanksArrangementScreen extends StatelessWidget {
           },
         ),
         title: Text(
-          AppConstants.rankingListOfBanks,
+          AppConstants.rankingListOfCurrency,
           style: AppConstants.bigTextStyle,
         ),
         centerTitle: true,
@@ -34,7 +34,9 @@ class BanksArrangementScreen extends StatelessWidget {
         padding: EdgeInsets.all(8.w),
         child: Column(
           children: [
-            ItemOfRowWithiIConAndText(text: AppConstants.pressLongToChangeBankArrangement,),
+            ItemOfRowWithiIConAndText(
+              text: AppConstants.pressLongToChangeCurrencyArrangement,
+            ),
             Padding(
               padding: EdgeInsets.all(8.w),
               child: Row(
@@ -55,8 +57,8 @@ class BanksArrangementScreen extends StatelessWidget {
               child: ListView.builder(
                 itemBuilder: (context, index) {
                   return ItemOfFavoriteRow(
-                    imagePath: "assets/icons/bank.png",
-                    text: AppConstants.blackStorePrice,
+                    imagePath: "assets/icons/qatarFlag.png",
+                    text: AppConstants.ryallQatr,
                   );
                 },
                 itemCount: 10,

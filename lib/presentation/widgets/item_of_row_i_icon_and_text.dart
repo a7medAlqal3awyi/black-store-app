@@ -30,7 +30,9 @@ class ItemOfRowWithiIConAndText extends StatelessWidget {
           Expanded(
             child: Text(
               text,
+
               style: TextStyle(
+                height: 1.6,
                 fontFamily: fontFamily,
                 color: const Color(0xFFC8CDD2),
                 fontWeight: FontWeight.w400,
