@@ -79,12 +79,14 @@ class AppConstants {
   static String mainCurrency = "العملة الاساسية";
   static String main = "الرئيسية";
   static String setting = "الاعدادات";
-  static String notifcationSetting = "اعدادات الاشعارات";
+  static String notificationSetting = "إعدادات الإشعارات";
+  static String notifications = "إشعارات";
   static String edit = "تعديل";
   static String logOut = "تسجيل الخروج";
   static String langauge = "اللغة";
   static String changephoto = "تغيير الصورة";
   static String change = "تغيير";
+  static String news = "الأخبار";
   static String saveChanges = "حفظ التعديلات";
   static String deleteAccount = "حذف الحساب";
   static String arabic = "العربية";
@@ -133,6 +135,7 @@ class AppConstants {
     fontSize: 18.sp,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w700,
+    color: Colors.white
   );
 
   // selected Text Style in bottom navigation bar
