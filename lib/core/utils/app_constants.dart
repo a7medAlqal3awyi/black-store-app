@@ -82,6 +82,8 @@ class AppConstants {
   static String changephoto = "تغيير الصورة";
   static String saveChanges = "حفظ التعديلات";
   static String deleteAccount = "حذف الحساب";
+  static String arabic = "العربية";
+  static String english = "الإنجليزية";
   static String blackStorePrice = "سعر السوق السوداء";
   static String ryallQatr = "ريال قطري / QAR";
   static String changepassword = "تغيير كلمه المرور";

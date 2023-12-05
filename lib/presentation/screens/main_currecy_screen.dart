@@ -96,4 +96,5 @@ class _MainCurrencyScreenState extends State<MainCurrencyScreen> {
       ),
     );
   }
+
 }

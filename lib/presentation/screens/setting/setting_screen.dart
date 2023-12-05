@@ -8,6 +8,7 @@ import '../../widgets/buttons/custom_txt_button.dart';
 import '../../widgets/leading_app_bar.dart';
 import '../banks_arrangement_screen.dart';
 import '../currency_arrangement_screen.dart';
+import '../language_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -55,7 +56,10 @@ class SettingScreen extends StatelessWidget {
             WidgetOfIconTextIcon(
                 iconPath: "assets/icons/global.svg",
                 txt: AppConstants.langauge,
-                onTap: () {}),
+                onTap: () {
+                  context.push(const LanguageScreen());
+
+                }),
             WidgetOfIconTextIcon(
                 iconPath: "assets/icons/notificationbing.svg",
                 txt: AppConstants.notifcationSetting,
