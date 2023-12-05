@@ -11,7 +11,10 @@ class AppConstants {
   static String email = "البريد الإلكتروني";
   static String enterEmail = "أدخل البريد الإلكتروني";
   static String enterPassword = "أدخل  كود المرور";
+  static String currentPassword = "كلمة المرور الحالية";
   static String password = "كلمة المرور";
+  static String newPassword = "كلمة المرور الجديدة";
+  static String verifiyNewPassword = "تاكيد كلمة المرور الجديدة";
   static String rememberMe = "تذكرني";
   static String or = "أو";
   static String doYouForgetPassword = "هل نسيت كلمة المرور ؟";
@@ -74,12 +77,14 @@ class AppConstants {
   static String shareApp = "مشاركة التطبيق";
   static String aboutApp = "عن التطبيق";
   static String mainCurrency = "العملة الاساسية";
+  static String main = "الرئيسية";
   static String setting = "الاعدادات";
   static String notifcationSetting = "اعدادات الاشعارات";
   static String edit = "تعديل";
   static String logOut = "تسجيل الخروج";
   static String langauge = "اللغة";
   static String changephoto = "تغيير الصورة";
+  static String change = "تغيير";
   static String saveChanges = "حفظ التعديلات";
   static String deleteAccount = "حذف الحساب";
   static String arabic = "العربية";
@@ -87,6 +92,7 @@ class AppConstants {
   static String blackStorePrice = "سعر السوق السوداء";
   static String ryallQatr = "ريال قطري / QAR";
   static String changepassword = "تغيير كلمه المرور";
+  static String changepasswordSuccess = "تم تغيير كلمة النجاح!";
   static String preferredArrangementOfBanks = "الترتيب المفضل للبنوك";
   static String rankingListOfBanks = "قائمة ترتيب للبنوك";
   static String rankingListOfCurrency = "قائمة ترتيب العملات";

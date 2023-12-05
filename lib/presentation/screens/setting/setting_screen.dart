@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_black_store/core/utils/routes.dart';
+import 'package:the_black_store/presentation/screens/change_password_screen.dart';
 import 'package:the_black_store/presentation/widgets/custom_profile_widget.dart';
 
 import '../../../core/utils/app_constants.dart';
@@ -39,7 +40,10 @@ class SettingScreen extends StatelessWidget {
             WidgetOfIconTextIcon(
                 iconPath: "assets/icons/WhiteLock.svg",
                 txt: AppConstants.changepassword,
-                onTap: () {}),
+                onTap: () {
+                  context.push(const ChangePasswordScreen());
+
+                }),
             WidgetOfIconTextIcon(
                 iconPath: "assets/icons/bankIcon.svg",
                 txt: AppConstants.preferredArrangementOfBanks,
