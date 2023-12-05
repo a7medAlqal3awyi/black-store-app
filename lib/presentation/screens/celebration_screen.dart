@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
+import 'package:the_black_store/core/utils/routes.dart';
+import 'package:the_black_store/presentation/screens/dash_board.dart';
 
 import '../widgets/buttons/my_button.dart';
 class CelebrationScreen extends StatelessWidget {
@@ -34,6 +36,7 @@ class CelebrationScreen extends StatelessWidget {
               text: AppConstants.theMain,
               textColor: Colors.black,
               onTap: () {
+                context.pushAndRemove(const DashBoardScreen());
               },
             ),
             const SizedBox(height: 50,)

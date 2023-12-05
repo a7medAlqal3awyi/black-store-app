@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
 import 'package:the_black_store/core/utils/routes.dart';
-import 'package:the_black_store/presentation/screens/main_screen.dart';
+import 'package:the_black_store/presentation/screens/dash_board.dart';
 import 'package:the_black_store/presentation/widgets/buttons/button_with_icon.dart';
 import 'package:the_black_store/presentation/widgets/double_text.dart';
 
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   text: AppConstants.login,
                   textColor: Colors.black,
                   onTap: () {
-                    context.push(const MainScreen());
+                    context.pushAndRemove(const DashBoardScreen());
                   },
                 ),
                 const DoubleText(),
