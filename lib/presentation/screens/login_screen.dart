@@ -5,13 +5,13 @@ import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
 import 'package:the_black_store/core/utils/routes.dart';
 import 'package:the_black_store/presentation/screens/main_screen.dart';
-import 'package:the_black_store/presentation/widgets/button_with_icon.dart';
+import 'package:the_black_store/presentation/widgets/buttons/button_with_icon.dart';
 import 'package:the_black_store/presentation/widgets/double_text.dart';
 
 import '../widgets/custom_check_box.dart';
 import '../widgets/input_field.dart';
 import '../widgets/leading_app_bar.dart';
-import '../widgets/my_button.dart';
+import '../widgets/buttons/my_button.dart';
 import '../widgets/screen_divider.dart';
 
 class LoginScreen extends StatefulWidget {

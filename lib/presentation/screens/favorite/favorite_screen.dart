@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/styles/app_styles.dart';
 import '../../../core/utils/app_constants.dart';
+import '../../widgets/icons/share_icon.dart';
 import '../../widgets/my_small_vertical_divider.dart';
-import '../../widgets/share_icon.dart';
-import '../../widgets/yellow_fav_icon.dart';
+import '../../widgets/icons/yellow_fav_icon.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});

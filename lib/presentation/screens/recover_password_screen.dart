@@ -7,7 +7,7 @@ import 'package:the_black_store/core/utils/routes.dart';
 import '../../core/utils/app_constants.dart';
 import '../widgets/input_field.dart';
 import '../widgets/leading_app_bar.dart';
-import '../widgets/my_button.dart';
+import '../widgets/buttons/my_button.dart';
 import 'optm_screen.dart';
 
 class RecoverPasswordScreen extends StatelessWidget {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../core/utils/app_constants.dart';
+import '../../../core/utils/app_constants.dart';
 
 // ignore: must_be_immutable
 class MyButtonWithIcon extends StatelessWidget {

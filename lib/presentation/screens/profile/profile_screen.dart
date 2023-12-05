@@ -8,7 +8,7 @@ import 'package:the_black_store/presentation/screens/setting/setting_screen.dart
 import '../../../core/styles/app_styles.dart';
 import '../../../core/utils/app_constants.dart';
 import '../../widgets/custom_profile_widget.dart';
-import '../../widgets/custom_txt_button.dart';
+import '../../widgets/buttons/custom_txt_button.dart';
 import '../main_currecy_screen.dart';
 
 class ProfileScreen extends StatelessWidget {

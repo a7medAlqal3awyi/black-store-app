@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:the_black_store/presentation/widgets/share_icon.dart';
 
 import '../../core/styles/app_styles.dart';
 import '../../core/utils/app_constants.dart';
 import 'column_of_double_text.dart';
+import 'icons/share_icon.dart';
 import 'my_small_vertical_divider.dart';
 
 class ItemOfGoldTap extends StatelessWidget {

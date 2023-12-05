@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
 
-import '../widgets/my_button.dart';
+import '../widgets/buttons/my_button.dart';
 class CelebrationScreen extends StatelessWidget {
   const CelebrationScreen({super.key});
 

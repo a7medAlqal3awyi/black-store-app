@@ -7,7 +7,7 @@ import 'package:the_black_store/core/utils/routes.dart';
 
 import '../../widgets/input_field_of_edit_profile.dart';
 import '../../widgets/leading_app_bar.dart';
-import '../../widgets/my_button.dart';
+import '../../widgets/buttons/my_button.dart';
 
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({super.key});

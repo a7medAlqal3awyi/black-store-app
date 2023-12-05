@@ -1,14 +1,13 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:the_black_store/presentation/widgets/x_icon.dart';
+import 'package:the_black_store/presentation/widgets/icons/x_icon.dart';
 
 import '../../core/styles/app_styles.dart';
 import '../../core/utils/app_constants.dart';
 import 'alert_dialog_input.dart';
-import 'my_button.dart';
+import 'buttons/my_button.dart';
 
 Future showMyAlert(context) {
   return showDialog(

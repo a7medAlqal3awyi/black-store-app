@@ -4,9 +4,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
 import '../widgets/column_of_double_text.dart';
-import '../widgets/favorite_icon.dart';
+import '../widgets/icons/favorite_icon.dart';
+import '../widgets/icons/share_icon.dart';
 import '../widgets/my_small_vertical_divider.dart';
-import '../widgets/share_icon.dart';
 import '../widgets/vertical_divider.dart';
 import 'app_bar_of_main_sc.dart';
 

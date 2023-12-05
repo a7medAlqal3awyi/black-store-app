@@ -80,7 +80,9 @@ class AppConstants {
   static String logOut = "تسجيل الخروج";
   static String langauge = "اللغة";
   static String changephoto = "تغيير الصورة";
+  static String saveChanges = "حفظ التعديلات";
   static String deleteAccount = "حذف الحساب";
+  static String blackStorePrice = "سعر السوق السوداء";
   static String changepassword = "تغيير كلمه المرور";
   static String preferredArrangementOfBanks = "الترتيب المفضل للبنوك";
   static String rankingListOfBanks = "قائمة ترتيب للبنوك";

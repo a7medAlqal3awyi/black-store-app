@@ -4,8 +4,9 @@ import 'package:the_black_store/core/utils/routes.dart';
 import 'package:the_black_store/presentation/widgets/custom_profile_widget.dart';
 
 import '../../../core/utils/app_constants.dart';
-import '../../widgets/custom_txt_button.dart';
+import '../../widgets/buttons/custom_txt_button.dart';
 import '../../widgets/leading_app_bar.dart';
+import '../banks_arrangement_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -40,7 +41,9 @@ class SettingScreen extends StatelessWidget {
             WidgetOfIconTextIcon(
                 iconPath: "assets/icons/bankIcon.svg",
                 txt: AppConstants.preferredArrangementOfBanks,
-                onTap: () {}),
+                onTap: () {
+                  context.push(const BanksArrangementScreen());
+                }),
             WidgetOfIconTextIcon(
                 iconPath: "assets/icons/dollarWhite.svg",
                 txt: AppConstants.preferredArrangementOfCurrency,
