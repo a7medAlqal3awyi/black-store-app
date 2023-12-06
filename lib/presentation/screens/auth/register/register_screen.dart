@@ -4,10 +4,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
 import 'package:the_black_store/core/utils/routes.dart';
 
-import '../../core/styles/app_styles.dart';
-import '../widgets/input_field.dart';
-import '../widgets/leading_app_bar.dart';
-import '../widgets/buttons/my_button.dart';
+import '../../../../core/styles/app_styles.dart';
+import '../../../widgets/input_field.dart';
+import '../../../widgets/leading_app_bar.dart';
+import '../../../widgets/buttons/my_button.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

@@ -3,7 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
-import 'package:the_black_store/presentation/app_cubit/app_cubit.dart';
+
+import '../cubit/app_cubit/app_cubit.dart';
+import '../cubit/app_cubit/app_state.dart';
 class DashBoardScreen extends StatelessWidget {
   const DashBoardScreen({super.key});
 

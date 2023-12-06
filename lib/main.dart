@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_black_store/core/network/remote/dio_helper.dart';
 import 'package:the_black_store/presentation/screens/splash_screen.dart';
 
+import 'core/utils/bloc_observer.dart';
+
 void main() {
   DioHelper.init();
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 

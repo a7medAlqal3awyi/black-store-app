@@ -4,7 +4,7 @@ import 'package:the_black_store/core/utils/routes.dart';
 
 import '../../core/styles/app_styles.dart';
 import '../../core/utils/app_constants.dart';
-import '../screens/register_screen.dart';
+import '../screens/auth/register/register_screen.dart';
 
 class DoubleText extends StatelessWidget {
   const DoubleText({super.key});

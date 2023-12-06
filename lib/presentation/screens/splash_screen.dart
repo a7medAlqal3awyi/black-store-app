@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_black_store/core/utils/routes.dart';
-import 'package:the_black_store/presentation/screens/login_screen.dart';
+import 'package:the_black_store/presentation/screens/auth/login/login_screen.dart';
 
 import '../../core/styles/app_styles.dart';
 
