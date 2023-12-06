@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../core/utils/app_constants.dart';
-import '../screens/favorite/favorite_screen.dart';
-import '../screens/main_screen.dart';
-import '../screens/profile/profile_screen.dart';
-import '../widgets/the_gold_screen.dart';
+import '../../../core/utils/app_constants.dart';
+import '../../screens/main_screen.dart';
+import '../../screens/favorite/favorite_screen.dart';
+import '../../screens/profile/profile_screen.dart';
+import '../../widgets/the_gold_screen.dart';
+import 'app_state.dart';
 
-part 'app_state.dart';
 
 class AppCubit extends Cubit<AppStates> {
   static AppCubit get(context) => BlocProvider.of(context);

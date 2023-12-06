@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:the_black_store/core/network/remote/dio_helper.dart';
 import 'package:the_black_store/presentation/screens/splash_screen.dart';
 
 void main() {
+  DioHelper.init();
   runApp(const MyApp());
 }
 
@@ -20,12 +22,9 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
               title: 'Black Store',
               theme: ThemeData(
-                  appBarTheme: const AppBarTheme(
-                    color: Colors.black,
-                  ),
-                  scaffoldBackgroundColor: Colors.black),
+                   ),
               darkTheme: ThemeData.dark(
-                useMaterial3: true,
+                  useMaterial3: false,
               ),
               themeMode: ThemeMode.dark,
               debugShowCheckedModeBanner: false,

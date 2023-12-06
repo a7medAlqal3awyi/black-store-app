@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:the_black_store/core/network/remote/dio_helper.dart';
 
 import '../../core/styles/app_styles.dart';
 import '../../core/utils/app_constants.dart';
-class AppBarMainScreen  extends StatelessWidget {
-  const AppBarMainScreen ({super.key});
+
+class AppBarMainScreen extends StatelessWidget {
+  const AppBarMainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return   Row(
+    return Row(
       children: [
         SizedBox(
           width: 48.w,
@@ -20,8 +22,7 @@ class AppBarMainScreen  extends StatelessWidget {
               width: 43.w,
               height: 43.h,
               child: const CircleAvatar(
-                backgroundImage:
-                AssetImage("assets/images/ahmed_suit.jpg"),
+                backgroundImage: AssetImage("assets/images/ahmed_suit.jpg"),
               ),
             ),
           ),
@@ -54,6 +55,20 @@ class AppBarMainScreen  extends StatelessWidget {
         ),
         const Spacer(),
         GestureDetector(
+          onTap: () {
+            //https://voipsys.space/api/articles?start_date=2023-10-06&page=1
+            DioHelper.getData(
+              url: 'https://voipsys.space/api/articles',
+              query: {
+                'start_date': '2023-10-06',
+                'page': '1',
+              },
+            ).then((value) {
+              debugPrint(value.data['data'][0]['id'].toString());
+            }).catchError((err){
+              print(err.toString());
+            });
+          },
           child: Container(
             width: 48.w,
             height: 48.h,
