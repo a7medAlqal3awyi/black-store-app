@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
 import 'package:the_black_store/presentation/cubit/auth_cubit/auth/auth_cubit.dart';
@@ -35,7 +36,30 @@ class _LoginScreenState extends State<LoginScreen> {
       create: (context) => AuthCubit(),
       child: BlocConsumer<AuthCubit, AuthStates>(
         listener: (context, state) {
-          // TODO: implement listener
+          if(state is AuthLoginSuccessState ){
+            Fluttertoast.showToast(
+                msg: "login success",
+                toastLength: Toast.LENGTH_LONG,
+                gravity: ToastGravity.BOTTOM,
+                timeInSecForIosWeb: 5,
+                backgroundColor: Colors.green,
+                textColor: Colors.white,
+                fontSize: 16.0
+            );
+
+            print(state.loginModel.user!.name);
+          }else {
+            print("email or password incorrect try again");
+            Fluttertoast.showToast(
+                msg: "email or password incorrect try again",
+                toastLength: Toast.LENGTH_LONG,
+                gravity: ToastGravity.BOTTOM,
+                timeInSecForIosWeb: 5,
+                backgroundColor: Colors.red,
+                textColor: Colors.white,
+                fontSize: 12.0
+            );
+          }
         },
         builder: (context, state) {
           var cubit = AuthCubit.get(context);
@@ -66,6 +90,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       MyInputFiled(
+                        validator: (value) {
+                          if (value
+                              .toString()
+                              .isEmpty) {
+                            return "Password address must not be empty";
+                          } else {
+                            return null;
+                          }
+                        },
                         obscureText: false,
                         type: TextInputType.emailAddress,
                         controller: emailController,
@@ -74,6 +107,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         widget: SvgPicture.asset("assets/icons/email.svg"),
                       ),
                       MyInputFiled(
+                        validator: (value) {
+                          if (value
+                              .toString()
+                              .isEmpty) {
+                            return "Password address must not be empty";
+                          } else {
+                            return null;
+                          }
+                        },
                         obscureText: true,
                         type: TextInputType.visiblePassword,
                         controller: passwordController,

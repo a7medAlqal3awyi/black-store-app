@@ -24,6 +24,7 @@ class DioHelper {
      Map<String, dynamic>? query,
     required Map<String, dynamic> data,
   }) async {
+
     return await dio.post(
       url,
       queryParameters: query,

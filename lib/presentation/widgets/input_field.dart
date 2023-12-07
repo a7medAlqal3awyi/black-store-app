@@ -11,12 +11,13 @@ class MyInputFiled extends StatelessWidget {
       this.controller,
       this.widget,
       required this.type,
-      required this.obscureText});
+      required this.obscureText, this.validator});
 
   final String title;
   final String hint;
   final TextInputType type;
   final bool obscureText;
+  final String? Function(String?)? validator;
 
   final TextEditingController? controller;
   final Widget? widget;
@@ -34,51 +35,43 @@ class MyInputFiled extends StatelessWidget {
               title,
               style: AppConstants.titleStyle,
             ),
+
             Container(
               height: 52.h,
               margin: EdgeInsets.only(top: 10.h),
-              padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 10.h),
+              padding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 10.h),
               decoration: BoxDecoration(
                   color: AppStyles.bg,
                   border: Border.all(color: AppStyles.bg, width: 1),
                   borderRadius: BorderRadius.circular(11.w)),
-              child: Row(
-                children: [
-                  Expanded(
+              child: TextFormField(
+                validator:validator ,
+                obscureText: obscureText,
 
-                    child: TextFormField(
-                      obscureText: obscureText,
-                      keyboardType: type,
-                      onTapOutside: (event) {
-                        FocusManager.instance.primaryFocus?.unfocus();
-                      },
-                      autofocus: false,
-                      cursorColor: Colors.grey[100],
-                      controller: controller,
-                      decoration: InputDecoration(
-                        hintText: hint,
-                        hintStyle: AppConstants.smallStyle,
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: AppStyles.bg,
-                            width: 0,
-                          ),
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: AppStyles.bg,
-                            width: 0,
-                          ),
-                        ),
-                      ),
+                keyboardType: type,
+                onTapOutside: (event) {
+                  FocusManager.instance.primaryFocus?.unfocus();
+                },
+                autofocus: false,
+                cursorColor: Colors.grey[100],
+                controller: controller,
+                decoration: InputDecoration(
+                  suffixIcon: widget,
+                  hintText: hint,
+                  hintStyle: AppConstants.smallStyle,
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: AppStyles.bg,
+                      width: 0,
                     ),
                   ),
-                  widget == null
-                      ? Container()
-                      : Container(
-                          child: widget,
-                        )
-                ],
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: AppStyles.bg,
+                      width: 0,
+                    ),
+                  ),
+                ),
               ),
             )
           ],
