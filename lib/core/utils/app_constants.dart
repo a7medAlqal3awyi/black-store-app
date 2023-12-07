@@ -8,6 +8,9 @@ class AppConstants {
   static String loginToYourAccount = "تسجيل الدخول الى حسابك";
   static String successLoginToYourAccount = "نجح تسجيل الدخول الى حسابك";
   static String failedLoginToYourAccount = "فشل تسجيل الدخول الى حسابك";
+
+  static String successRegisterToYourAccount = "تم إنشاء حساب جديد";
+  static String failedRegisterToYourAccount = "فشل في إنشاء حساب جديد";
   static String login = "تسجيل الدخول";
   static String next = "التالي";
   static String email = "البريد الإلكتروني";
