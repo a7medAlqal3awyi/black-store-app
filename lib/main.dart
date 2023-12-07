@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:the_black_store/core/network/local/shared_pref.dart';
 import 'package:the_black_store/core/network/remote/dio_helper.dart';
 import 'package:the_black_store/presentation/screens/splash_screen.dart';
 
 import 'core/utils/bloc_observer.dart';
 
-void main() {
+void main() async{
   DioHelper.init();
   Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
+  await CacheHelper.init();
 }
 
 class MyApp extends StatelessWidget {
@@ -42,7 +44,8 @@ class MyApp extends StatelessWidget {
                 Locale('ar'),
                 Locale('en'),
               ],
-              home: const SplashScreen());
+              home:
+              const SplashScreen());
         });
   }
 }

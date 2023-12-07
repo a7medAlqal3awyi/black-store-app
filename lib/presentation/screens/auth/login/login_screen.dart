@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
+import 'package:the_black_store/core/utils/routes.dart';
 import 'package:the_black_store/presentation/cubit/auth_cubit/auth/auth_cubit.dart';
 import 'package:the_black_store/presentation/cubit/auth_cubit/auth/auth_state.dart';
+import 'package:the_black_store/presentation/screens/dash_board.dart';
 import 'package:the_black_store/presentation/widgets/double_text.dart';
+import 'package:the_black_store/presentation/widgets/toast/my_toast.dart';
 
 import '../../../widgets/custom_check_box.dart';
 import '../../../widgets/input_field.dart';
@@ -35,26 +37,14 @@ class _LoginScreenState extends State<LoginScreen> {
       child: BlocConsumer<AuthCubit, AuthStates>(
         listener: (context, state) {
           if (state is AuthLoginSuccessState) {
-            Fluttertoast.showToast(
-                msg: "login success",
-                toastLength: Toast.LENGTH_LONG,
-                gravity: ToastGravity.BOTTOM,
-                timeInSecForIosWeb: 5,
-                backgroundColor: Colors.green,
-                textColor: Colors.white,
-                fontSize: 16.0);
-
-            print(state.loginModel.user!.name);
+            showToast(
+                msg: AppConstants.successLoginToYourAccount,
+                color: Colors.green);
+            context.pushAndRemove(const DashBoardScreen());
           }
           if (state is AuthLoginFailedState) {
-            Fluttertoast.showToast(
-                msg: "email or password incorrect try again",
-                toastLength: Toast.LENGTH_LONG,
-                gravity: ToastGravity.BOTTOM,
-                timeInSecForIosWeb: 5,
-                backgroundColor: Colors.red,
-                textColor: Colors.white,
-                fontSize: 12.0);
+            showToast(
+                msg: AppConstants.failedLoginToYourAccount, color: Colors.red);
           }
         },
         builder: (context, state) {
