@@ -24,6 +24,7 @@ dependencies:
   conditional_builder_null_safety: ^0.0.6
   equatable: ^2.0.5
   fluttertoast: ^8.2.4
+  shared_preferences: ^2.2.2
 
 
 dev_dependencies:

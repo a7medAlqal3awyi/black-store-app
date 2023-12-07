@@ -8,14 +8,12 @@ import 'package:the_black_store/core/styles/app_styles.dart';
 import 'package:the_black_store/core/utils/app_constants.dart';
 import 'package:the_black_store/presentation/cubit/auth_cubit/auth/auth_cubit.dart';
 import 'package:the_black_store/presentation/cubit/auth_cubit/auth/auth_state.dart';
-import 'package:the_black_store/presentation/widgets/buttons/button_with_icon.dart';
 import 'package:the_black_store/presentation/widgets/double_text.dart';
 
 import '../../../widgets/custom_check_box.dart';
 import '../../../widgets/input_field.dart';
 import '../../../widgets/leading_app_bar.dart';
 import '../../../widgets/buttons/my_button.dart';
-import '../../../widgets/screen_divider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -36,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
       create: (context) => AuthCubit(),
       child: BlocConsumer<AuthCubit, AuthStates>(
         listener: (context, state) {
-          if(state is AuthLoginSuccessState ){
+          if (state is AuthLoginSuccessState) {
             Fluttertoast.showToast(
                 msg: "login success",
                 toastLength: Toast.LENGTH_LONG,
@@ -44,12 +42,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 timeInSecForIosWeb: 5,
                 backgroundColor: Colors.green,
                 textColor: Colors.white,
-                fontSize: 16.0
-            );
+                fontSize: 16.0);
 
             print(state.loginModel.user!.name);
-          }else {
-            print("email or password incorrect try again");
+          }
+          if (state is AuthLoginFailedState) {
             Fluttertoast.showToast(
                 msg: "email or password incorrect try again",
                 toastLength: Toast.LENGTH_LONG,
@@ -57,8 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 timeInSecForIosWeb: 5,
                 backgroundColor: Colors.red,
                 textColor: Colors.white,
-                fontSize: 12.0
-            );
+                fontSize: 12.0);
           }
         },
         builder: (context, state) {
@@ -91,9 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       MyInputFiled(
                         validator: (value) {
-                          if (value
-                              .toString()
-                              .isEmpty) {
+                          if (value.toString().isEmpty) {
                             return "Password address must not be empty";
                           } else {
                             return null;
@@ -108,9 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       MyInputFiled(
                         validator: (value) {
-                          if (value
-                              .toString()
-                              .isEmpty) {
+                          if (value.toString().isEmpty) {
                             return "Password address must not be empty";
                           } else {
                             return null;
@@ -134,12 +126,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             text: AppConstants.login,
                             textColor: Colors.black,
                             onTap: () {
-                              if(formKey.currentState!.validate()){
+                              if (formKey.currentState!.validate()) {
                                 cubit.userLogin(
                                     email: emailController.text,
                                     password: passwordController.text);
                               }
-
                             },
                           );
                         },
@@ -153,14 +144,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                       ),
                       const DoubleText(),
-                      ScreenDivider(
-                        dividerText: AppConstants.or,
-                      ),
-                      MyButtonWithIcon(
-                          imagePath: 'assets/icons/google.svg',
-                          color: AppStyles.bg,
-                          text: AppConstants.completeWithGoogle,
-                          textColor: Colors.white)
                     ]),
                   ),
                 ),
