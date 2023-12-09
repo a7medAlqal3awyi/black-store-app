@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:the_black_store/core/network/remote/dio_helper.dart';
+import 'package:the_black_store/core/utils/routes.dart';
+import 'package:the_black_store/presentation/screens/notification/notification_screen.dart';
 
 import '../../core/styles/app_styles.dart';
 import '../../core/utils/app_constants.dart';
@@ -56,18 +57,8 @@ class AppBarMainScreen extends StatelessWidget {
         const Spacer(),
         GestureDetector(
           onTap: () {
-            //https://voipsys.space/api/articles?start_date=2023-10-06&page=1
-            DioHelper.getData(
-              url: 'https://voipsys.space/api/articles',
-              query: {
-                'start_date': '2023-10-06',
-                'page': '1',
-              },
-            ).then((value) {
-              debugPrint(value.data['data'][0]['id'].toString());
-            }).catchError((err){
-              print(err.toString());
-            });
+
+          context.push(const NotificationScreen());
           },
           child: Container(
             width: 48.w,

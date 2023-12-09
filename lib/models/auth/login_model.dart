@@ -14,7 +14,7 @@ class LoginModel extends Equatable {
   @override
   List<Object?> get props => [
     accessToken,
-    user
+    user,
   ];
 }
 

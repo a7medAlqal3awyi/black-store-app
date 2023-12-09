@@ -85,7 +85,9 @@ class AppConstants {
   static String main = "الرئيسية";
   static String setting = "الاعدادات";
   static String notificationSetting = "إعدادات الإشعارات";
+  static String theNotifications = "الإشعارات";
   static String notifications = "إشعارات";
+  static String theArticles = "المقالات";
   static String edit = "تعديل";
   static String logOut = "تسجيل الخروج";
   static String langauge = "اللغة";

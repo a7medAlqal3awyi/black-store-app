@@ -38,34 +38,36 @@ class NewPasswordScreen extends StatelessWidget {
       ),
       body: Padding(
         padding:  EdgeInsets.all(16.w),
-        child: Column(
-          children: [
-            MyInputFiled(
-              obscureText: true,
-              type: TextInputType.visiblePassword,
-              controller: passwordController,
-              title: AppConstants.password,
-              hint: AppConstants.enterPassword,
-              widget: SvgPicture.asset("assets/icons/Lock.svg"),
-            ),
-            MyInputFiled(
-              obscureText: true,
-              type: TextInputType.visiblePassword,
-              controller: verifyPasswordController,
-              title: AppConstants.verifyPassword,
-              hint: AppConstants.enterPassword,
-              widget: SvgPicture.asset("assets/icons/Lock.svg"),
-            ),
-            SizedBox(height: context.deviceHeight/2.5,),
-            ButtonWithOnlyText(
-              color: primary,
-              text: AppConstants.follow,
-              textColor: Colors.black,
-              onTap: () {
-                context.push(const CelebrationScreen());
-              },
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              MyInputFiled(
+                obscureText: true,
+                type: TextInputType.visiblePassword,
+                controller: passwordController,
+                title: AppConstants.password,
+                hint: AppConstants.enterPassword,
+                widget: SvgPicture.asset("assets/icons/Lock.svg"),
+              ),
+              MyInputFiled(
+                obscureText: true,
+                type: TextInputType.visiblePassword,
+                controller: verifyPasswordController,
+                title: AppConstants.verifyPassword,
+                hint: AppConstants.enterPassword,
+                widget: SvgPicture.asset("assets/icons/Lock.svg"),
+              ),
+              SizedBox(height: context.deviceHeight/2.5,),
+              ButtonWithOnlyText(
+                color: primary,
+                text: AppConstants.follow,
+                textColor: Colors.black,
+                onTap: () {
+                  context.push(const CelebrationScreen());
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
